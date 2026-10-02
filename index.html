@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hành trình Đỏ 2026 – Cổng tài liệu</title>
+<style>
+:root{
+  --red:#C62828; --red2:#8E1B1B; --orange:#E64A19; --orange2:#F57C00;
+  --cream:#FFF8F2; --text:#292929; --muted:#6f6f6f; --line:#eadbd2;
+  --white:#fff; --shadow:0 10px 30px rgba(142,27,27,.10);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#faf7f4;color:var(--text);line-height:1.55}
+a{text-decoration:none;color:inherit}
+.hero{background:linear-gradient(135deg,var(--red2),var(--red) 55%,var(--orange));color:white;padding:42px 24px 34px}
+.wrap{max-width:1180px;margin:auto}
+.hero-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:30px;font-size:13px}
+h1{font-size:34px;line-height:1.15;margin:15px 0 8px;letter-spacing:.3px}
+.hero p{margin:5px 0;color:#fff5ef}
+.event-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.meta{background:rgba(255,255,255,.12);padding:9px 13px;border-radius:10px;font-size:14px}
+.admin-note{background:#fff3e8;color:#7d2b16;border-left:4px solid var(--orange2);padding:14px 16px;border-radius:10px;margin:24px 0}
+.controls{margin-top:-18px;position:relative}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+.searchrow{display:flex;gap:10px;flex-wrap:wrap}
+input,select{border:1px solid #d9c9c0;border-radius:10px;padding:12px 14px;font-size:15px;background:white}
+input{flex:1;min-width:240px}
+select{min-width:190px}
+.quick{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}
+.quick a{background:var(--cream);border:1px solid #f0d8ca;padding:8px 12px;border-radius:9px;font-size:14px;color:var(--red2)}
+section{padding:28px 0}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:15px}
+.section-title h2{margin:0;color:var(--red2);font-size:23px}
+.section-title span{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{background:white;border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:0 5px 18px rgba(0,0,0,.035);display:flex;flex-direction:column;min-height:175px}
+.card:hover{border-color:#e9aa91;transform:translateY(-2px);transition:.18s}
+.icon{font-size:25px}
+.card h3{font-size:16px;margin:8px 0 6px}
+.card p{font-size:13px;color:var(--muted);margin:0 0 12px}
+.tag{display:inline-block;font-size:11px;padding:4px 8px;border-radius:20px;background:#fbe9e4;color:#9b321d;margin-right:5px}
+.status{display:inline-block;font-size:11px;padding:4px 8px;border-radius:20px;background:#edf7ed;color:#34713a}
+.actions{margin-top:auto;display:flex;gap:8px;align-items:center}
+.open{display:inline-block;background:var(--red);color:white;padding:8px 12px;border-radius:8px;font-size:13px;font-weight:bold}
+.open.disabled{background:#bdb7b3;cursor:not-allowed}
+.copy{border:1px solid #d9c9c0;background:white;padding:7px 9px;border-radius:8px;cursor:pointer;font-size:12px}
+.timeline{display:grid;grid-template-columns:90px 1fr;gap:12px;margin-bottom:11px}
+.date{background:var(--red2);color:#fff;border-radius:10px;padding:10px;text-align:center;font-weight:bold;height:max-content}
+.daybox{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px}
+.daybox strong{color:var(--red2)}
+.route{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.place{background:white;border:1px solid var(--line);padding:9px 12px;border-radius:9px}
+.arrow{color:var(--orange2);font-weight:bold}
+footer{background:#341111;color:#f8eae5;padding:26px 20px;margin-top:20px;font-size:13px}
+.guide{background:#fff;border:1px dashed #d79a83;border-radius:12px;padding:17px}
+.guide code{background:#f5eee9;padding:2px 5px;border-radius:4px}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.hero-top{display:block}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.date{text-align:left}.hero h1{font-size:27px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <span class="badge">CỔNG THÔNG TIN & TÀI LIỆU NỘI BỘ</span>
+        <h1>HÀNH TRÌNH ĐỎ 2026</h1>
+        <p>Chương trình nghiên cứu, học tập tại Việt Nam</p>
+        <div class="event-meta">
+          <span class="meta">📅 11–16/10/2026</span>
+          <span class="meta">📍 Hà Nội – Thái Nguyên – Cao Bằng – Lạng Sơn</span>
+          <span class="meta">🤝 Việt Nam – Trung Quốc</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="controls">
+    <div class="panel">
+      <div class="searchrow">
+        <input id="search" placeholder="🔎 Tìm tài liệu, chương trình, đại biểu..." oninput="renderDocs()">
+        <select id="filter" onchange="renderDocs()">
+          <option value="">Tất cả nhóm tài liệu</option>
+        </select>
+      </div>
+      <div class="quick">
+        <a href="#docs">📁 Kho tài liệu</a>
+        <a href="#timeline">🗓 Chương trình</a>
+        <a href="#guide">⚙️ Hướng dẫn cập nhật link</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section id="docs">
+    <div class="section-title">
+      <h2>📁 Kho tài liệu chương trình</h2>
+      <span id="count"></span>
+    </div>
+    <div class="cards" id="docGrid"></div>
+  </section>
+
+  <section id="timeline">
+    <div class="section-title"><h2>🗓 Chương trình khung</h2><span>11–16/10/2026</span></div>
+    <div id="timelineBox"></div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>🧭 Tuyến hành trình</h2></div>
+    <div class="panel route">
+      <span class="place">🇻🇳 Hà Nội</span><span class="arrow">→</span>
+      <span class="place">🇻🇳 Thái Nguyên</span><span class="arrow">→</span>
+      <span class="place">🇻🇳 Cao Bằng</span><span class="arrow">→</span>
+      <span class="place">🇻🇳 Lạng Sơn</span>
+    </div>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>HÀNH TRÌNH ĐỎ 2026</strong><br>
+    Cổng tài liệu chương trình nghiên cứu, học tập tại Việt Nam.
+  </div>
+</footer>
+
+<script>
+// ======================================================
+// KHU VỰC CẤU HÌNH – BẠN CHỈ CẦN THAY LINK Ở "url"
+// ======================================================
+const documents = [
+  {title:"FOLDER TỔNG THỂ", category:"Chương trình", icon:"📁", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1S10humvn6jgucC2aZTxNOvOYnIFBTNyU?usp=drive_link"},
+  {title:"Danh sách đại biểu", category:"Thông tin đại biểu", icon:"👥", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1Ly2vxDT1fEQObrUCY9hRFS1mPmASYPVr?usp=drive_link"},
+  {title:"Chương trình làm việc tổng thể", category:"Chương trình", icon:"🗓️", date:"11–16/10/2026", status:"Đã có chương trình khung", url:"https://drive.google.com/drive/folders/1LzuV9EvcvUDH5ZFJLcE-r2uOJ32XzJ57?usp=sharing"},
+  {title:"Chương trình chi tiết từng ngày", category:"Chương trình", icon:"📋", date:"Cập nhật: —", status:"Đang hoàn thiện", url:""},
+  {title:"Phân công nhiệm vụ", category:"Phân công nhiệm vụ", icon:"🧩", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1BeW0zgHFQq87jYbXDRNpdKaZsxNp1g5b?usp=drive_link"},
+  {title:"Chương trình Diễn đàn Thanh niên Việt – Trung", category:"Diễn đàn", icon:"🎤", date:"12/10/2026", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1NiKwLx6fJMsygrCxIcU7pCRTpbgdJ8GG?usp=drive_link"},
+  {title:"Kịch bản điều hành chương trình", category:"Diễn đàn", icon:"🎙️", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1wS4Dccy3ya8gOsZLn41aCdnduVUe_WVs?usp=drive_link"},
+  {title:"Tài liệu tham luận / phát biểu", category:"Diễn đàn", icon:"📄", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/110KCkq2ev6r8olx0_ZcP7BdTIhyyDTlY?usp=drive_link"},
+  {title:"Tiệc chào mừng, chia tay", category:"Tọa đàm", icon:"🎓", date:"12/10/2026,16/10/2026", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1fi5y5-9Y4542lD9j0fZNqOjlM_-vhVoU?usp=drive_linkSS"},
+  {title:"Toạ đàm tại Thái Nguyên", category:"Tọa đàm", icon:"🎓", date:"13/10/2026", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1cQkZSYI7qCYbMvrG7g1dGZ67GiLKR1aq?usp=drive_link"},
+  {title:"Tọa đàm tại Cao Bằng", category:"Tọa đàm", icon:"🤝", date:"15/10/2026", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1VGWFvhYWqZgiBB5VY961Gu7JR2YOrpxt?usp=drive_link"},
+  {title:"Danh bạ đầu mối liên hệ", category:"Danh bạ", icon:"☎️", date:"Cập nhật: —", status:"Liên lạc", url:"https://drive.google.com/drive/folders/1zXXqLofFqmM7tNBFjm5nx2VKwdhEoxR1?usp=drive_link"},
+  {title:"Văn bản / công văn liên quan", category:"Văn bản", icon:"📑", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1-Sgk5K5RQdS9FjH9iLFFzKOkA0yD2qNE?usp=drive_link"},
+  {title:"Truyền thông, tuyên truyền", category:"Truyền thông", icon:"📣", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1FcqpCNoXRfz7c_N5YKlUnTiYeyr2LUgb?usp=drive_link"},
+  {title:"Văn nghệ", category:"Văn nghệ", icon:"📚", date:"12-16/10/2026", status:"Chưa cập nhật", url:"https://drive.google.com/drive/folders/1j6FxGMDGLiC_8PwLQqEO050nJ7BAk8uV?usp=drive_link"},  
+  {title:"Bộ nhận diện / hình ảnh chương trình", category:"Truyền thông", icon:"🖼️", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1ru1BvHowO-qum0s4Yo8ZX8jB95vMvyX5?usp=drive_link"},
+  {title:"Báo cáo tình hình triển khai", category:"Báo cáo", icon:"📊", date:"Cập nhật: —", status:"Đang cập nhật", url:"https://drive.google.com/drive/folders/1ZAT-j9MVbkgleaIb8K7fepAgXJUYtbsX?usp=drive_link"},
+  {title:"Báo cáo tổng kết chương trình", category:"Báo cáo", icon:"📚", date:"Sau chương trình", status:"Chưa cập nhật", url:""}
+];
+
+// Chương trình khung lấy theo tài liệu chương trình đã cung cấp.
+const timeline = [
+  ["11/10","Lạng Sơn, Hà Nội","Đón đoàn đại biểu Trung Quốc và Việt Nam; buổi thông tin, định hướng; Chuyên đề “Việt Nam – Trung Quốc: Từ đồng hành trong cách mạng đến hợp tác cùng phát triển”"],
+  ["12/10","Hà Nội","Tham quan Bảo tàng Dân tộc học Việt Nam; Diễn đàn Thanh niên Việt – Trung “Tiếp nối mạch nguồn đỏ-Cùng kiến tạo tương lai”; Tiệc chào mừng; Xem múa rối nước"],
+  ["13/10","Thái Nguyên","Tham quan Khu di tích Đại đội 915; Nghĩa trang liệt sĩ quân tình nguyện Trung Quốc; Bản Làng Thái Hải; Hợp tác xã chè Hảo Đạt; Tọa đàm sinh viên Việt - Trung; Tỉnh uỷ Thái Nguyên mời cơm - Chương trình giao lưu nghệ thuật."],
+  ["14/10","Thái Nguyên – Cao Bằng","Tham quan ATK Định Hóa; di chuyển đến Cao Bằng; Tỉnh uỷ Cao Bằng mời cơm"],
+  ["15/10","Cao Bằng","Tham quan Pác Bó; Tọa đàm “Từ cội nguồn cách mạng – Cùng vun đắp tương lai hữu nghị”; Khu di tích Kim Đồng; tiệc chia tay."],
+  ["16/10","Cao Bằng – Lạng Sơn – Hà Nội","Trả phòng; di chuyển Lạng Sơn; đoàn Quảng Tây xuất cảnh qua Cửa khẩu Hữu Nghị; các đoàn còn lại về Hà Nội."]
+];
+
+const categories=[...new Set(documents.map(x=>x.category))];
+const filter=document.getElementById("filter");
+categories.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;filter.appendChild(o)});
+
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+
+function renderDocs(){
+  const q=document.getElementById("search").value.toLowerCase().trim();
+  const cat=filter.value;
+  const list=documents.filter(d=>
+    (!cat||d.category===cat) &&
+    (!q||(d.title+" "+d.category+" "+d.date+" "+d.status).toLowerCase().includes(q))
+  );
+  document.getElementById("count").textContent=`Hiển thị ${list.length}/${documents.length} tài liệu`;
+  document.getElementById("docGrid").innerHTML=list.map((d,i)=>{
+    const idx=documents.indexOf(d);
+    const ready=!!d.url;
+    return `<article class="card">
+      <div><span class="icon">${d.icon}</span></div>
+      <div><span class="tag">${esc(d.category)}</span> <span class="status">${esc(d.status)}</span></div>
+      <h3>${esc(d.title)}</h3>
+      <p>${esc(d.date)}</p>
+      <div class="actions">
+        ${ready
+          ? `<a class="open" href="${esc(d.url)}" target="_blank" rel="noopener">Mở tài liệu ↗</a>`
+          : `<span class="open disabled">Chưa gắn link</span>`}
+        ${ready ? `<button class="copy" onclick="copyLink(${idx})">Copy link</button>` : ""}
+      </div>
+    </article>`;
+  }).join("");
+}
+function copyLink(i){
+  navigator.clipboard.writeText(documents[i].url).then(()=>alert("Đã sao chép link."));
+}
+document.getElementById("timelineBox").innerHTML=timeline.map(x=>`
+  <div class="timeline">
+    <div class="date">${x[0]}</div>
+    <div class="daybox"><strong>${x[1]}</strong><br>${x[2]}</div>
+  </div>`).join("");
+renderDocs();
+</script>
+</body>
+</html>
